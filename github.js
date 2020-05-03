@@ -16,11 +16,11 @@ class Github {
     const profileResponse = await fetch (`https://api.github.com/users/${user}?client_id=${this.client_id}&client_secret=${this.client_secret}`);
 
     // fetch user repos
-    const repoResponse = await fetch(`https://api.github.com/users/${user}/repos?per_page=${this.repos_count}&sort=${this.repos_sort}&client_id=${this.client_id}&client_secret=${this.client_secret}`);
+    const reposResponse = await fetch(`https://api.github.com/users/${user}/repos?per_page=${this.repos_count}&sort=${this.repos_sort}&client_id=${this.client_id}&client_secret=${this.client_secret}`);
 
     // set json data to variable
     const profile = await profileResponse.json();
-    const repos = await repoResponses.json();
+    const repos = await reposResponse.json();
 
     // return data
     return {
