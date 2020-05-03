@@ -4,6 +4,7 @@ class UI {
     this.profile = document.getElementById('profile');
   }
 
+  // display profile ui
   showProfile(user){
     this.profile.innerHTML = `
     <div class="card car-body mb-3">
@@ -32,6 +33,11 @@ class UI {
   <h3 class="page-heading mb-3">Latest Repos</h3>
   <div id="repos"></div>
     `;
+  }
+
+  // Clear profile
+  clearProfile() {
+    this.profile.innerHTML = '';
   }
 
 }// end of ui class
